@@ -1,0 +1,9 @@
+phpmyadmin port : 3030
+
+localhost port: 8080
+
+mysql port: 3308
+
+Nisam uradio drugi zadatak do kraja, samo sam uradio dohvatanje svih zauzeća i ostalu interakciju sa serverom.
+Ostao sam pri verziji da se rezervacije spremaju u JSON, samo sam implementirao da se sad uzima u obzir i predavač.
+Zadatak 3 se radi neurađenog zadatka2 može provjeriti tako što dodate ručno rezervaciju putem koda u inicijalizacija.js i provjerite da li će se stanje u tabeli promijeniti(meni radilo tako).

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Pocetna</title>
+    <link rel="stylesheet" type="text/css" href="pocetna.css">
+</head>
+<body>
+<div id = "meni">
+    <div id = "logo">
+        <img src="logo.jfif"  height = 60 width = 60 alt="logo">
+    </div>
+    <ul>
+        <li class="aktivan_tab"><a href="pocetna.html">Početna</a></li>
+        <li class="neaktivan_tab"><a href="sale.html">Sale</a></li>
+        <li class="neaktivan_tab"><a href="unos.html">Unos</a></li>
+        <li class="neaktivan_tab"><a href="rezervacija.html">Rezervacije</a></li>
+        <li class="neaktivan_tab"><a href="osobe.html">Osobe</a></li>
+    </ul>
+</div>
+<hr class = "bijelaLinija">
+<div id = "sadrzaj" onchange = "ucitajSlike()">
+    <div id ="grid-item1">
+        <!--<img id = "prvi" src ="" height="250" width="250" alt="">-->
+    </div>
+    <div id ="grid-item2">
+        <!--<img id = "drugi" src ="" height="250" width="250" alt="">-->
+    </div>    
+    <div id ="grid-item3">
+        <!--<img id = "treci" src ="" height="250" width="250" alt="">-->
+    </div>
+    
+    <button onclick="prethodnaSlika()" id = "prethodni" class="myButton">Prethodni</button>
+    <button onclick="sljedecaSlika()" id = "sljedeci" class="myButton">Sljedeci</button>
+</div>
+<script type="text/javascript" src="Pozivi.js"></script>
+</body>
+</html>

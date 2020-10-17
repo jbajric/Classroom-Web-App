@@ -1,0 +1,9 @@
+Pošto sam koristio u kalendar.js za spiralu2 metodu da mi učitava rezervacije u kalendar, u pozivi.js je izostavljen taj dio koda
+
+Zadatak2 Spirala3 je urađen u ovom dijelu koda:
+
+//linija ~~315
+kalendar.js -> function popuniRezervacije() { ...
+
+
+Za dodavanje nove rezervacije potrebno je ponovo upisati timestamp ili eventualno potvrditi salu ponovnim odabirom iste u formi sala.

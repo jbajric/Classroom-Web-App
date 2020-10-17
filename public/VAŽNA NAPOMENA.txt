@@ -1,0 +1,10 @@
+AKO ŽELITE FUNKCIONALNOST SPIRALE: 
+    omogućiti zadnju liniju u kalendar.js
+    
+    popuniRezervacije();
+
+
+AKO ŽELITE PREGLED TESTOVA TESTOVIS2.html: 
+    zakomentarisati zadnju liniju u kalendar.js 
+    
+    //popuniRezervacije();

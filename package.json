@@ -1,0 +1,31 @@
+{
+  "name": "wt1917950",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jbajric@bitbucket.org/jbajric/wt1917950.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jbajric/wt1917950#readme",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "express": "^4.17.1",
+    "jsdom": "^16.0.0",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.1.0",
+    "pug": "^2.0.4",
+    "requirejs": "^2.3.6",
+    "sequelize": "^5.21.3",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.0",
+    "supertest": "^4.0.2"
+  }
+}

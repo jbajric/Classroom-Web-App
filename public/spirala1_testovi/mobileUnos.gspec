@@ -1,0 +1,60 @@
+@objects
+ meni #meni
+ li #meni ul li
+ lista-stavka-* #meni ul li a
+ logo #logo
+ sadrzaj #sadrzaj
+ naziv input[name='naziv']
+ brojMjesta input[name='brojMjesta']
+ odgovornaOsoba input[name='odgovornaOsoba']
+ sprat input[name='sprat']
+ unos input[name='unos']
+ pojedinacni form[name='fPojedinacni']
+
+= Header section =
+ @on mobile 
+ screen:
+  width < 601px
+ meni:
+  contains li
+  css text-align is "center"
+  width 95 to 100 % of screen/width
+ logo:
+  near meni -50 to 50px top
+  css position is "absolute"
+ li:
+  css display is "inline"
+ lista-stavka-1:
+  text contains "Početna"
+ lista-stavka-2:
+  text contains "Sale"
+  below lista-stavka-1 -20 to 10px
+ lista-stavka-3:
+  text contains "Unos"
+  css text-decoration-line is "none"
+  below lista-stavka-2 -20 to 10px
+ lista-stavka-4:
+  text contains "Rezervacije"  
+  below lista-stavka-3 -20 to 10px
+ lista-stavka-5:
+  text contains "Osobe"
+  below lista-stavka-5 -20 to 10px
+
+= Main section =
+ sadrzaj:
+  contains naziv,brojMjesta,odgovornaOsoba,sprat,unos
+  css background-color is "rgb(82, 158, 241)"
+  below meni -35 to 35px
+@on mobile 
+ naziv:
+  above brojMjesta 0 to 20 px
+ brojMjesta:
+  above odgovornaOsoba 0 to 20 px
+ odgovornaOsoba:
+  above sprat 0 to 20 px
+ sprat:
+  above unos 0 to 20 px
+ 
+ 
+ 
+ 

@@ -1,0 +1,45 @@
+@objects
+ meni #meni
+ li #meni ul li
+ lista-stavka-* #meni ul li a
+ logo #logo
+ sadrzaj #sadrzaj
+ slika .grid-item1
+
+= Header section =
+ meni:
+  near li -50 to 50px top
+  css text-align is "center"
+  width 95 to 100 % of screen/width
+ logo:
+  near meni -20 to 20px top
+  css position is "absolute"
+ li:
+  css display is "inline-block"
+ lista-stavka-1:
+  text contains "Početna"
+  css text-decoration-line is "none"
+ lista-stavka-2:
+  text contains "Sale"
+ lista-stavka-3:
+  text contains "Unos"
+ lista-stavka-4:
+  text contains "Rezervacije"
+ lista-stavka-5:
+  text contains "Osobe"
+
+= Main section =
+ sadrzaj:
+  contains slika
+  css background-color is "rgb(82, 158, 241)"
+  below meni 5 to 25px
+ slika:
+  width ~ 250px
+  height ~ 250px
+  css margin-left is "20px"
+
+   
+ 
+ 
+ 
+ 

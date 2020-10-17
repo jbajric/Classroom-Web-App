@@ -1,0 +1,135 @@
+@media only screen and (max-width: 600px) {
+    input {
+        position: absolute;
+    }
+
+    .labele {
+        position: relative;
+        margin-left: 25%;
+        width: 130px;
+    }
+
+    .forma {
+        left:-35%;
+    }
+
+    .bijelaLinija {
+        display: inline-block; 
+        width: 100%;
+        padding: 3px; 
+        background-color: white !important;
+        margin: auto;
+    }
+
+    #meni li a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        height: 20px;
+    }
+
+    #meni {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        height: 100px;
+        padding-bottom: 70px;
+    }
+
+    #meni ul li {
+        display: inline;
+    }
+
+    #meni ul {
+        display:block;
+        padding-top:35px;
+        height: 100px;
+
+    }
+
+    #meni #logo{
+        position: absolute;
+        margin-left: 50%;
+        margin-right: 50%;
+        height: 50%;
+        top: 0;
+        transform: translateY(-45%);
+    }
+}
+
+#sadrzaj {
+    background-color: rgb(32,32,32);
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 50%;
+}
+
+.bijelaLinija {
+    display: inline-block; 
+    border: none;
+    width: 100%;
+    padding: 3px; 
+    margin-top: 30px;
+    margin-bottom: -20px;
+    background-color: white !important;
+}
+
+#meni li{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    margin-top: 45px;
+    color: whitesmoke;
+}
+
+#meni {
+    position: relative;
+    width: 100%;
+    top: 30px;
+    height: 70px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgb(32,32,32);
+}
+
+#logo{
+    position: absolute;
+    margin-left: 50%;
+    margin-right: 50%;
+    height: 50%;
+    top: 0;
+    transform: translateY(-90%);
+}
+
+input {
+    display: block;
+    position: relative;
+    margin-left: 0;
+    margin-right: 35%;
+}
+
+label{
+    text-align: left;
+    color: aquamarine;
+    margin-left: 41%;
+    margin-right: 32%;
+    position: absolute;
+    display: block;
+}
+
+.forma {
+    position: relative;
+    margin-left: 55%;
+}
+
+.aktivan_tab a{
+    text-decoration: none !important;
+    border-bottom-style: none !important;
+    color: whitesmoke;
+}
+
+.neaktivan_tab a {
+    color: SlateGray;
+}

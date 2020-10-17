@@ -1,0 +1,373 @@
+{
+  "testId" : "1-mobileunos.gspec",
+  "name" : "mobileUnos.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobileUnos.gspec --url http://localhost:8080/unos.html --size 600x600 --htmlreport izvjestaji_mobileUnos",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobileUnos.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573513137251,
+          "sections" : [ {
+            "name" : "Header section",
+            "place" : {
+              "filePath" : "mobileUnos.gspec",
+              "lineNumber" : 14
+            },
+            "objects" : [ {
+              "name" : "screen",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "width < 601px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "< 601px",
+                  "realDistance" : "588px"
+                } ],
+                "highlight" : [ "screen" ]
+              } ]
+            }, {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "contains li",
+                "highlight" : [ "meni", "li" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "css text-align is \"center\"",
+                "highlight" : [ "meni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "width 95 to 100 % of screen/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "95 to 100% [558 to 588px]",
+                  "realDistance" : "97% [572px]"
+                } ],
+                "highlight" : [ "meni" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "near meni -50 to 50px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "-50 to 50px",
+                  "realDistance" : "-38px"
+                } ],
+                "highlight" : [ "logo", "meni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "css position is \"absolute\"",
+                "highlight" : [ "logo" ]
+              } ]
+            }, {
+              "name" : "li",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "css display is \"inline\"",
+                "highlight" : [ "li" ]
+              } ]
+            }, {
+              "name" : "lista-stavka-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "text contains \"Početna\"",
+                "highlight" : [ "lista-stavka-1" ]
+              } ]
+            }, {
+              "name" : "lista-stavka-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "text contains \"Sale\"",
+                "highlight" : [ "lista-stavka-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "below lista-stavka-1 -20 to 10px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "lista-stavka-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "lista-stavka-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "-20 to 10px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "lista-stavka-2", "lista-stavka-1" ]
+              } ]
+            }, {
+              "name" : "lista-stavka-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "text contains \"Unos\"",
+                "highlight" : [ "lista-stavka-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "css text-decoration-line is \"none\"",
+                "highlight" : [ "lista-stavka-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "below lista-stavka-2 -20 to 10px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "lista-stavka-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "lista-stavka-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "-20 to 10px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "lista-stavka-3", "lista-stavka-2" ]
+              } ]
+            }, {
+              "name" : "lista-stavka-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "text contains \"Rezervacije\"",
+                "highlight" : [ "lista-stavka-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "below lista-stavka-3 -20 to 10px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "lista-stavka-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "lista-stavka-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "-20 to 10px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "lista-stavka-4", "lista-stavka-3" ]
+              } ]
+            }, {
+              "name" : "lista-stavka-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "text contains \"Osobe\"",
+                "highlight" : [ "lista-stavka-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "below lista-stavka-5 -20 to 10px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "lista-stavka-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "lista-stavka-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "-20 to 10px",
+                  "realDistance" : "-20px"
+                } ],
+                "highlight" : [ "lista-stavka-5", "lista-stavka-5" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Main section",
+            "place" : {
+              "filePath" : "mobileUnos.gspec",
+              "lineNumber" : 43
+            },
+            "objects" : [ {
+              "name" : "sadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "contains naziv,brojMjesta,odgovornaOsoba,sprat,unos",
+                "highlight" : [ "sadrzaj", "naziv", "brojMjesta", "odgovornaOsoba", "sprat", "unos" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 46
+                },
+                "name" : "css background-color is \"rgb(82, 158, 241)\"",
+                "highlight" : [ "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileUnos.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "below meni -35 to 35px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "-35 to 35px",
+                  "realDistance" : "9px"
+                } ],
+                "highlight" : [ "sadrzaj", "meni" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meni" : {
+              "area" : [ 8, 46, 572, 140 ]
+            },
+            "sprat" : {
+              "area" : [ 122, 338, 147, 22 ]
+            },
+            "naziv" : {
+              "area" : [ 122, 218, 147, 22 ]
+            },
+            "screen" : {
+              "area" : [ 0, 0, 588, 519 ]
+            },
+            "unos" : {
+              "area" : [ 122, 378, 102, 22 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 8, 195, 572, 205 ]
+            },
+            "odgovornaOsoba" : {
+              "area" : [ 122, 298, 147, 22 ]
+            },
+            "lista-stavka-2" : {
+              "area" : [ 48, 101, 532, 20 ]
+            },
+            "lista-stavka-1" : {
+              "area" : [ 48, 81, 532, 20 ]
+            },
+            "lista-stavka-4" : {
+              "area" : [ 48, 141, 532, 20 ]
+            },
+            "lista-stavka-3" : {
+              "area" : [ 48, 121, 532, 20 ]
+            },
+            "lista-stavka-5" : {
+              "area" : [ 48, 161, 532, 20 ]
+            },
+            "logo" : {
+              "area" : [ 294, 14, 60, 70 ]
+            },
+            "brojMjesta" : {
+              "area" : [ 122, 258, 146, 22 ]
+            },
+            "li" : {
+              "area" : [ 48, 81, 532, 20 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1573513134459,
+        "type" : "node"
+      } ],
+      "time" : 1573513128654,
+      "type" : "node"
+    } ]
+  }
+}

@@ -1,0 +1,112 @@
+#tabelaOsoba {
+    border-collapse: collapse;
+    border-color:#93a1a1;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+
+}
+
+#tabelaOsoba td{
+    font-family:Arial, sans-serif;
+    font-size:15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 200px;
+    border-style:solid;
+    border-width:0px;
+    text-align: center;
+    border-top-width:1px;
+    border-bottom-width:1px;
+    border-color:#93a1a1;
+    color:#002b36;
+    background-color:#fdf6e3;
+}
+
+#tabelaOsoba th{
+    font-family:Arial, sans-serif;
+    font-size:20px;
+    padding:13px 20px;
+    border-style:solid  #93a1a1;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+    border-top-width:1px;
+    border-bottom-width:1px;
+    color:#fdf6e3;
+    background-color:#657b83;
+}
+
+#tabelaOsoba kolonaOsoba{
+    color:#dae8fc;
+    text-align:center;
+    vertical-align:top;
+}
+
+#tabelaOsoba kolonaSala{
+    color:#8597b1;
+    text-align:center;
+    vertical-align:top;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+
+}
+
+.bijelaLinija {
+    display: inline-block; 
+    padding: 3px; 
+    background-color: white !important;
+    margin: auto;
+    border: none;
+}
+
+#meni li{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    margin-top: 48px;
+    color: Silver;
+    padding-bottom: 9px;
+}
+
+#meni {
+    position: relative;
+    width: auto;
+    top: 20px;
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgb(32,32,32);
+}
+
+#logo{
+    position: absolute;
+    margin-left: 50%;
+    margin-right: 50%;
+    height: 50%;
+    top: 0;
+    transform: translateY(-70%);
+}
+
+#sadrzaj {
+    background-color: rgb(32,32,32);
+    margin: auto;
+    margin-top: -8px;
+    padding-top: 10%;
+    padding-bottom: 50%;
+    padding-left: 20px;
+}
+
+.aktivan_tab a{
+    text-decoration: none !important;
+    border-bottom-style: none !important;
+    color: whitesmoke;
+}
+
+.neaktivan_tab a {
+    color: SlateGray;
+}

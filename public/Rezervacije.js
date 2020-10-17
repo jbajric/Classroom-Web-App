@@ -1,0 +1,3 @@
+
+Pozivi.ucitajOsoblje();
+Pozivi.ucitajRezervacije();

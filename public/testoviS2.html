@@ -1,0 +1,465 @@
+<!DOCTYPE html> 
+<html lang = "en">
+    <head>
+        <title>Mocha Tests</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css">
+        <link rel="stylesheet" type="text/css" href="rezervacija.css">
+        <style>
+            td{
+                border: 3px solid black;
+                height: 20px;
+                width: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ispis"></div>
+        <div id="mocha"></div>
+        <div id = "sadrzaj">
+    <label class="labele">Lista sala: </label>
+    <select id = "listaSala"  onchange = "popuniRezervacije()">
+        <option class = "formaSala" value = "1">VA1</option>
+        <option class = "formaSala" value = "2">VA2</option>
+        <option class = "formaSala" value = "3">MA</option>
+        <option class = "formaSala" value = "4">EE1</option>
+        <option class = "formaSala" value = "5">EE2</option>
+        <option class = "formaSala" value = "6">0-01</option>
+        <option class = "formaSala" value = "7">0-02</option>
+        <option class = "formaSala" value = "8">0-03</option>
+        <option class = "formaSala" value = "9">0-04</option>
+        <option class = "formaSala" value = "10">0-05</option>
+        <option class = "formaSala" value = "11">0-06</option>
+        <option class = "formaSala" value = "12">0-07</option>
+        <option class = "formaSala" value = "13">0-08</option>
+        <option class = "formaSala" value = "14">0-09</option>
+        <option class = "formaSala" value = "15">1-01</option>
+        <option class = "formaSala" value = "16">1-02</option>
+        <option class = "formaSala" value = "17">1-03</option>
+        <option class = "formaSala" value = "18">1-04</option>
+        <option class = "formaSala" value = "19">1-05</option>
+        <option class = "formaSala" value = "20">1-06</option>
+        <option class = "formaSala" value = "21">1-07</option>
+        <option class = "formaSala" value = "22">1-08</option>
+        <option class = "formaSala" value = "23">1-09</option>
+    </select> <br>
+    <br><label class="labele">Periodičnost: </label>
+    <input class="rezervacijaCB" type="checkbox" name="periodicnost" value="DA"><br>
+    <br><label class = "labele">Početak: </label>
+    <form> <input type ="time" name="pocetak" id="pocetak" onchange="popuniRezervacije()"></form>
+    <br><label class = "labele">Kraj: </label>
+    <form> <input type ="time" name="kraj" id="kraj" onchange="popuniRezervacije()"></form> 
+    <br>
+        <table class = "kalendar" id="Kalendar">
+            <!-- prvi red sa nazivom mjeseca --> 
+            <tr><td colspan="7"><b>Novembar</b></td></tr>   
+            <!-- drugi red --> 
+            <tr> <td colspan="7">&nbsp;</td>
+            </tr>
+            <!-- treći red sa nazivom dana --> 
+            <tr>
+                <td class = "nazivDana">PON</td>
+                <td class = "nazivDana">UTO</td>
+                <td class = "nazivDana">SRI</td>
+                <td class = "nazivDana">ČET</td>
+                <td class = "nazivDana">PET</td>
+                <td class = "nazivDana">SUB</td>
+                <td class = "nazivDana">NED</td>
+            </tr>
+            <!-- 4. prvi red sa danima --> 
+            <tr>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>            
+            </tr>
+            <!-- 5. drugi red sa danima --> 
+            <tr>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td class = "zauzeta">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>                           
+            </tr>
+            <!-- 6. treći red sa danima --> 
+            <tr>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td class = "zauzeta">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>  
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>                          
+            </tr>
+            <!-- 7. četvrti red sa danima --> 
+            <tr>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td class = "zauzeta">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td> 
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>                           
+            </tr>
+            <!-- 8. četvrti red sa danima --> 
+            <tr>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td class = "zauzeta">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class = "danMjeseca">
+                    <table class ="brojDanaMjesec">
+                        <tr>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td class = "slobodna">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>                          
+            </tr> 
+            <!-- 9. red --> 
+            <tr>
+                <td colspan="7">&nbsp;</td>
+            </tr>           
+        </table>    
+    <br>
+        <button onclick="prethodni()" id = "prethodni" class="myButton">Prethodni</button>
+        <button onclick="sljedeci()" id = "sljedeci" class="myButton">Sljedeci</button>
+        </div>
+        <script src="https://unpkg.com/chai/chai.js"></script>
+        <script src="https://unpkg.com/mocha/mocha.js"></script>
+        <script class="mocha-init">
+            mocha.setup('bdd');
+            mocha.checkLeaks();
+        </script>
+        <script src="kalendar.js"></script>
+        <script src="testoviS2.js"></script>
+        <script class="mocha-exec">
+            mocha.run();
+        </script>
+    </body>
+</html>
